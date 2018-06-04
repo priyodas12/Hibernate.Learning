@@ -1,0 +1,44 @@
+package client;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import beans.Student;
+
+public class Test {
+
+	public Test() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		
+		Student s=new Student();
+		s.setId(2);
+		s.setName("abcd");
+		s.setEmail("abci322@gmail.com");
+		s.setMarks(454);
+		//student object is now transient.all required value set through setter
+		
+		Configuration cfg=new Configuration();
+		cfg.configure("resources/hibernate.cfg.xml");
+		SessionFactory sf=cfg.buildSessionFactory();
+		//ExecutorService executorService = Executors.newFixedThreadPool(nThreads, threadFactory)
+		Session s1=sf.openSession();
+		s1.save(s);
+		
+		//student object state is persistence
+		
+		s1.beginTransaction().commit();
+		//student object will move to database
+		
+		s1.evict(s);
+		
+		//student object will be removed from persistence,garbage collector collect student object
+		}
+
+}
