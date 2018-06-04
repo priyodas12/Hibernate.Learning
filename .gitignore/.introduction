@@ -1,3 +1,5 @@
+/**
+
 Hibernate(for enterprise application) idea come from a sleep mode.(winter sleep of frog).
 
 Hibernate(JDK or JRE+ Hibernate jar + database).
@@ -31,4 +33,4 @@ DAO-Data Access Object.
 Statement,preparedStatement,CallableStatement SQL is different from vendors(oracle,mysql):DDL,DML
 
 
-
+**/
