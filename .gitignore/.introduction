@@ -1,0 +1,34 @@
+Hibernate(for enterprise application) idea come from a sleep mode.(winter sleep of frog).
+
+Hibernate(JDK or JRE+ Hibernate jar + database).
+-----------------------------------------------
+1.HQL support.(database independent query)
+2.Only run time exceptions.
+3.Auto DDL(data defination langugae-create,alter,delete) support.
+4.Object reation mapping(ORM),relation between entities not table related mapping.Object relations(IS-A,HAS-A).
+5.Cache support.
+6.Primary Key generated support.
+7.Data validation support in form of Annotation(JSR0003).(irrspective of presentation and controller validation)
+8.Exception Free(Run time).
+9.Object Graph Mapping.OGM support(NOSql database or Hadup base database).
+10.Indext based searching support.
+11.Connecton pool implementations.
+
+EJB Session bean+Application server needed.
+
+challenges in JDBC-
+------------------
+1.Database dependent query.
+2.cache support.
+3.complie time exceptions.
+------------------
+
+MVC contains Presentation,Controller,Model(business+DAO+3rd part services(transactions,logger,jms.logger)).Hibernate will funtion 
+on DAO and DATABASE part.
+
+DAO-Data Access Object.
+
+Statement,preparedStatement,CallableStatement SQL is different from vendors(oracle,mysql):DDL,DML
+
+
+
