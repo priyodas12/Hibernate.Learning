@@ -1,0 +1,15 @@
+Object state in Hibernate:
+
+Transient-create object through POJO before attaching to hibernate.
+Persistant-Once attached to hibernate.
+Detached-Removed object to hibernate.
+
+
+Create Hibernate project:
+------------------------
+POJO(Plain Old Java Object) class: Required number of properties storing in table.Default construtor mandatory.class should
+be public.
+Mapping file:
+Configuration file:
+Test Class:
+
